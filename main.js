@@ -1,4 +1,5 @@
 let issues = [];
+ const issueCounts = document.getElementById("issueCount")
 
 const api = () =>{
     const url = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
@@ -9,10 +10,10 @@ const api = () =>{
     display(data.data)} )
 }
 
-const display  = (text) =>{ 
+const display  = (text) =>{
         const containerBox = document.getElementById("container")
         containerBox.innerHTML = ""
-
+        issueCounts.innerText=text.length
         text.forEach((element) => {
             
             const card = document.createElement("div")
@@ -72,13 +73,7 @@ const display  = (text) =>{
 }
 api()
 
-const allBtn = document.getElementById("all-btn")
-const openBtn = document.getElementById("open-btn")
-const closedBtn = document.getElementById("closed-btn")
-allBtn.addEventListener('click' , function(){
-    allBtn.classList.remove( "bg-blue-600" , "text-white" );
-allBtn.classList.add("bg-gray-200");
-})
+
 
 
 function openModel(id){
@@ -154,4 +149,37 @@ function loadIssus(type){
         const Closedissues = issues.filter(item => item.status === "closed")
         display(Closedissues)
     }
+}
+
+
+
+
+const tabBtns = document.querySelectorAll(".tabBtn")
+
+tabBtns.forEach(btn => {
+  btn.addEventListener("click", function(){
+
+    tabBtns.forEach(b =>{
+      b.classList.remove("bg-blue-600","text-white")
+      b.classList.add("bg-gray-200","text-black")
+    })
+
+    this.classList.remove("bg-gray-200","text-black")
+    this.classList.add("bg-blue-600","text-white")
+
+  })
+})
+
+function searchIssues(){
+
+const searchText = document.getElementById("searchInput").value
+
+const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`
+
+fetch(url)
+.then(res => res.json())
+.then(data =>{
+display(data.data)
+})
+
 }
