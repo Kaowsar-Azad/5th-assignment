@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Github Issues Tracker</title>
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+ 
+<body >
+    <div class="bg-white shadow p-4 flex justify-between items-center">
+
+<h1 class="text-xl  flex gap-1.5 items-center font-bold"><img class="w-9 " src="assets/github-logo.png">Github Issues Tracker</h1>
+
+<div class="flex gap-2">
+<input id="searchInput" placeholder="Search issues..." class="border rounded-lg px-4 py-2"/>
+<button class="bg-blue-600 text-white px-5 py-2 rounded-lg">Search</button>
+</div>
+</div>
+
+
+
+
+
+<!-- Tabs -->
+<div class="max-w-7xl mx-auto p-6">
+<div class="flex gap-3 mb-8 shadow-md p-[15px] mt-8 rounded-lg">
+
+<button id="all-btn" onclick="loadIssus('all')" class="tabBtn bg-blue-600 text-white px-6 py-2 rounded-lg ">All</button>
+
+<button id="open-btn" onclick="loadIssus('open')"  class="tabBtn bg-gray-200 px-6 py-2 rounded-lg btn-primary">Open</button>
+
+<button id="closed-btn" onclick="loadIssus('closed')"  class="tabBtn bg-gray-200 px-6 py-2 rounded-lg">Closed</button>
+
+</div>
+ 
+
+<!-- Summary Section -->
+
+<div class="flex justify-between items-center shadow-md p-[15px] mt-[40px] rounded-lg mb-8">
+
+<div class="flex items-center gap-4">
+
+<div class="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-full text-blue-600 text-xl">
+<img src="assets/Aperture.png">
+</div>
+
+<div>
+
+<h2 class="text-lg font-bold"><span id="issueCount">0</span> Issues</h2>
+
+<p class="text-gray-500 text-sm">Track and manage your project issues</p>
+
+</div>
+
+</div>
+
+
+<div class="flex gap-6 text-sm">
+<div class="flex items-center gap-2"><span class="w-3 h-3 bg-green-500 rounded-full"></span>Open</div>
+<div class="flex items-center gap-2"><span class="w-3 h-3 bg-purple-500 rounded-full"></span>Closed</div>
+</div>
+
+</div>
+
+
+<section id="container" class="grid grid-cols-4 justify-between   gap-[30px] container m-auto shadow-md p-[20px]  rounded-lg ">
+    
+</section>
+
+<section id="model">
+    
+</section>
+
+<script src="main.js"></script>
+
+</body>
+</html>
