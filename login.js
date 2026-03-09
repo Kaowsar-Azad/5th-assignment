@@ -8,7 +8,7 @@ document.getElementById('btn-button').addEventListener('click', function(){
 
     if (number === 'admin' && pin === 'admin123'){
         
-        window.location.assign("/main.html")
+        window.location.assign("./main.html")
     } else {
         alert('login Failed');
     }
