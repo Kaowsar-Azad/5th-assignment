@@ -36,7 +36,7 @@ const display  = (text) =>{
         <span class="text-sm font-semibold">${element.priority.toUpperCase()}</span>
     </div>
 
-    <h3 class="text-[15px] font-semibold  mb-2">
+    <h3 class="text-[17px] font-semibold  mb-2">
         ${element.title}
     </h3>
 
@@ -44,16 +44,16 @@ const display  = (text) =>{
         ${element.description}
     </p>
 
-    <div class="flex gap-2  mb-3">
+    <div class="flex gap-2 mb-3">
        ${(element.labels).map((label,index) => {
 
     
     if(index === 0){
-  color = "bg-red-50 text-red-500"
+  color = "bg-red-50  text-[13px] text-red-500"
   img = "assets/BugDroid.png"
 }
   else{
-  color = "bg-yellow-100 text-yellow-700"
+  color = "bg-yellow-100  text-[13px] text-yellow-700"
   img = "assets/Lifebuoy.png"
 }
     return `
