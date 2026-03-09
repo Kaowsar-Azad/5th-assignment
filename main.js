@@ -30,7 +30,7 @@ const display  = (text) =>{
                 borderColor = "border-purple-500"
             }
         card.innerHTML = `
-        <div onclick="openModel(${element.id})" class="h-[260px] bg-gray-50 p-[30px] shadow-md border-t-4 ${borderColor} rounded-lg">
+        <div onclick="openModel(${element.id})" class="h-[260px] w-[270px] bg-gray-50  py-[20px] px-[15px]  shadow-md border-t-4 ${borderColor} rounded-lg">
         <div class="flex justify-between items-center mb-3">
         <p class="text-green-500">${element.status === "open"? `<img src="assets/Open-Status.png">`: `<img src="assets/Closed- Status .png">`}</p>
         <span class="text-sm font-semibold">${element.priority.toUpperCase()}</span>
@@ -44,16 +44,16 @@ const display  = (text) =>{
         ${element.description}
     </p>
 
-    <div class="flex gap-2 mb-3">
+    <div class="flex items-center  gap-2 mb-3">
        ${(element.labels).map((label,index) => {
 
     
     if(index === 0){
-  color = "bg-red-50  text-[13px] text-red-500"
+  color = "bg-red-50  text-[13px] text-red-500 border-2 border-[#FECACA] "
   img = "assets/BugDroid.png"
 }
   else{
-  color = "bg-yellow-100  text-[13px] text-yellow-700"
+  color = "bg-yellow-100  text-[12px] text-yellow-700 border-2 border-[#FDE68A] px-[10px] "
   img = "assets/Lifebuoy.png"
 }
     return `
