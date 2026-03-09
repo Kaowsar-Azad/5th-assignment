@@ -8,6 +8,7 @@
 <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -17,8 +18,8 @@
 <h1 class="text-xl  flex gap-1.5 items-center font-bold"><img class="w-9 " src="assets/github-logo.png">Github Issues Tracker</h1>
 
 <div class="flex gap-2">
-<input id="searchInput" placeholder="Search issues..." class="border rounded-lg px-4 py-2"/>
-<button onclick="searchIssues()" class="bg-blue-600 text-white px-5 py-2 rounded-lg">Search</button>
+<input id="searchInput" placeholder=" Search issues..." class="border rounded-lg px-4 py-2"/>
+<button onclick="searchIssues()" class="bg-blue-600 text-white px-5 py-2 text-[16px] rounded-lg"><img src="assets/Plus.png" class=" inline mb-1 text-white  mr-2 ">New Issue</button>
 </div>
 </div>
 
@@ -74,6 +75,11 @@
 <section id="model">
     
 </section>
+
+<div id="loading" class=" hidden  justify-center items-center  h-screen">
+  <span class="loading loading-spinner loading-lg"></span>
+</div>
+
 
 <script src="main.js"></script>
 

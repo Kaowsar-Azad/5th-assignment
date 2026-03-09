@@ -1,13 +1,18 @@
 let issues = [];
  const issueCounts = document.getElementById("issueCount")
-
+ const Loading = document.getElementById("loading")
 const api = () =>{
+    Loading.classList.remove("hidden")
+    Loading.classList.add("flex")
     const url = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
     fetch(url)
 .then(res => res.json())
 .then(data  =>{
     issues = data.data
-    display(data.data)} )
+    display(data.data)
+    Loading.classList.add("hidden")
+} )
+    
 }
 
 const display  = (text) =>{
@@ -27,7 +32,7 @@ const display  = (text) =>{
         card.innerHTML = `
         <div onclick="openModel(${element.id})" class="h-[260px] bg-gray-50 p-[30px] shadow-md border-t-4 ${borderColor} rounded-lg">
         <div class="flex justify-between items-center mb-3">
-        <span class="text-green-500">●</span>
+        <p class="text-green-500">${element.status === "open"? `<img src="assets/Open-Status.png">`: `<img src="assets/Closed- Status .png">`}</p>
         <span class="text-sm font-semibold">${element.priority.toUpperCase()}</span>
     </div>
 
@@ -183,3 +188,4 @@ display(data.data)
 })
 
 }
+
