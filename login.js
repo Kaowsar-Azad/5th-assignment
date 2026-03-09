@@ -6,8 +6,8 @@ document.getElementById('btn-button').addEventListener('click', function(){
     const inputCode = document.getElementById('input-code');
     const pin = inputCode.value;
 
-    if (number === '01234567890' && pin === '1234'){
-        alert('login success');
+    if (number === 'admin' && pin === 'admin123'){
+        
         window.location.assign("/main.html")
     } else {
         alert('login Failed');
