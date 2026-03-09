@@ -30,10 +30,14 @@ const display  = (text) =>{
                 borderColor = "border-purple-500"
             }
         card.innerHTML = `
-        <div onclick="openModel(${element.id})" class="h-[260px] w-[270px] bg-gray-50  py-[20px] px-[15px]  shadow-md border-t-4 ${borderColor} rounded-lg">
+        <div onclick="openModel(${element.id})" class="h-[260px] w-[280px] flex flex-col justify-between bg-gray-50  py-[20px] px-[15px]  shadow-md border-t-4 ${borderColor} rounded-lg">
         <div class="flex justify-between items-center mb-3">
         <p class="text-green-500">${element.status === "open"? `<img src="assets/Open-Status.png">`: `<img src="assets/Closed- Status .png">`}</p>
-        <span class="text-sm font-semibold">${element.priority.toUpperCase()}</span>
+        <span class="text-sm font-semibold ${
+       element.priority === "high" ? "bg-red-100 text-red-600 px-2 py-[2px] rounded-full" :
+      element.priority === "medium" ? "bg-yellow-100 text-yellow-700 px-2 py-[2px] rounded-full" :
+       "bg-purple-100 text-purple-600 px-2 py-[2px] rounded-full"
+      }">${element.priority.toUpperCase()}</span>
     </div>
 
     <h3 class="text-[17px] font-semibold  mb-2">
@@ -44,7 +48,7 @@ const display  = (text) =>{
         ${element.description}
     </p>
 
-    <div class="flex items-center  gap-2 mb-3">
+    <div class="flex items-center  gap-2 mb-3 h-[15px] ">
        ${(element.labels).map((label,index) => {
 
     
@@ -105,14 +109,31 @@ modalsection.innerHTML = `
         ${new Date(issue.createdAt).toLocaleDateString()}
     </div>
 </div>
+ <div class="flex items-center mt-3  gap-2 mb-3">
+       ${(issue.labels).map((label,index) => {
 
+    
+    if(index === 0){
+  color = "bg-red-50  text-[13px] text-red-500 border-2 border-[#FECACA] "
+  img = "assets/BugDroid.png"
+}
+  else{
+  color = "bg-yellow-100  text-[12px] text-yellow-700 border-2 border-[#FDE68A] px-[10px] "
+  img = "assets/Lifebuoy.png"
+}
+    return `
+   <span class="inline-flex items-center gap-1 ${color} text-[12px] font-medium px-3 py-[3px] rounded-full whitespace-nowrap">
+   <img src="${img}" class="w-3 h-3">${label}</span>
+    `
+}).join("")}
+    </div>
 <p class="py-4">${issue.description}</p>
 
 <div class="flex justify-around max-w-11/12 shadow-lg bg-gray-100 p-2">
 
 <div>
 <p class="text-[#64748B] " >Assignee:</p>
-<h3 class=" text-[16px]" >${issue.author.toUpperCase()}</h3>
+<h3 class=" text-[16px] text-[1F2937] font-bold " >${issue.author.toUpperCase()}</h3>
 </div>
 
 <div>
