@@ -1,82 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+    <!--logo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-<meta charset="UTF-8">
-<title>Github Issues Tracker</title>
+     <title>Document</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <style>
+        *{
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
 
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-
+   
 </head>
+<body class="min-h-screen max-w-md mx-auto bg-base-200">
 
-<body >
-    <div class="bg-white shadow p-4 flex justify-between items-center">
-
-<h1 class="text-xl  flex gap-1.5 items-center font-bold"><img class="w-9 " src="assets/github-logo.png">Github Issues Tracker</h1>
-
-<div class="flex gap-2">
-<input id="searchInput" placeholder="Search issues..." class="border rounded-lg px-4 py-2"/>
-<button onclick="searchIssues()" class="bg-blue-600 text-white px-5 py-2 rounded-lg">Search</button>
-</div>
-</div>
-
-
-
-
-
-<!-- Tabs -->
-<div class="max-w-7xl mx-auto p-6">
-<div class="flex gap-3 mb-8 shadow-md p-[15px] mt-8 rounded-lg">
-
-<button id="all-btn" onclick="loadIssus('all')" class="tabBtn bg-blue-600 text-white px-6 py-2 rounded-lg ">All</button>
-
-<button id="open-btn" onclick="loadIssus('open')"  class="tabBtn bg-gray-200 px-6 py-2 rounded-lg btn-primary">Open</button>
-
-<button id="closed-btn" onclick="loadIssus('closed')"  class="tabBtn bg-gray-200 px-6 py-2 rounded-lg">Closed</button>
-
-</div>
- 
-
-<!-- Summary Section -->
-
-<div class="flex justify-between items-center shadow-md p-[15px] mt-[40px] rounded-lg mb-8">
-
-<div class="flex items-center gap-4">
-
-<div class="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-full text-blue-600 text-xl">
-<img src="assets/Aperture.png">
-</div>
-
-<div>
-
-<h2 class="text-lg font-bold"><span id="issueCount">0</span> Issues</h2>
-
-<p class="text-gray-500 text-sm">Track and manage your project issues</p>
-
-</div>
-
-</div>
-
-
-<div class="flex gap-6 text-sm">
-<div class="flex items-center gap-2"><span class="w-3 h-3 bg-green-500 rounded-full"></span>Open</div>
-<div class="flex items-center gap-2"><span class="w-3 h-3 bg-purple-500 rounded-full"></span>Closed</div>
-</div>
-
-</div>
-
-
-<section id="container" class="grid grid-cols-4 justify-between   gap-[30px] container m-auto shadow-md p-[20px]  rounded-lg ">
-    
-</section>
-
-<section id="model">
-    
-</section>
-
-<script src="main.js"></script>
-
+    <div class="logo w-[250px] pt-35 mx-auto">
+        <img src="assets/Logo-full.png" alt="" srcset="">
+    </div>
+   <div class=" pt-10">
+     <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label  class="label text-neutral font-bold text-[17px]  ">Mobile Number</label>
+          <input id="input-number" type="text" maxlength="11" minlength="11"  class="input rounded-full " placeholder="Enter your number" />
+          <label   class="label text-neutral font-bold  text-[17px]">4 Digit Pin</label>
+          <input type="text"  id="input-code" maxlength="4" minlength="4" class="input rounded-full" placeholder="Enter 4 Digit Pin" />
+          <button id="btn-button" class="btn btn-primary mt-4 rounded-full  text-[16px]">Login</button>
+        </fieldset>
+      </div>
+   </div>
+   <script src="login.js"></script>
 </body>
 </html>
