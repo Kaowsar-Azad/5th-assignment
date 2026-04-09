@@ -1,21 +1,86 @@
-1. What is the difference between var, let, and const?
-Ans:- var, let এবং const তিনটিই JavaScript-এ ভ্যারিয়েবল তৈরি করার জন্য ব্যবহার হয়।
-var পুরোনো পদ্ধতি এবং এখন কম ব্যবহার করা হয়।
-let দিয়ে ভ্যারিয়েবল বানালে তার মান পরে পরিবর্তন করা যায়।
-const দিয়ে ভ্যারিয়েবল বানালে তার মান আর পরিবর্তন করা যায় না।
+## 📸 Preview
 
-2. What is the spread operator (...) ?
-Ans:- Spread operator  ব্যবহার করা হয় কোনো array বা object এর ভেতরের সব ডাটা ছড়িয়ে নতুন জায়গায় ব্যবহার করার জন্য। এটা দিয়ে সহজে ডাটা কপি করা  যায়।
+<img src="https://i.ibb.co.com/7PNBbv0/webpage1.png" />
 
-3. What is the difference between map(), filter(), and forEach()?
-Ans:- forEach শুধু array এর প্রতিটি element এর উপর কাজ করে কিন্তু নতুন array তৈরি করে না।
-map প্রতিটি element নিয়ে কাজ করে এবং নতুন একটি array তৈরি করে।
-filter  নির্দিষ্ট শর্ত অনুযায়ী কিছু element বেছে নিয়ে নতুন array তৈরি করে।
 
-4. What is an arrow function?
- Ans:- Arrow function হলো JavaScript-এ function লেখার একটি ছোট এবং সহজ পদ্ধতি।
-এটা সাধারণ function এর চেয়ে কম কোডে লেখা যায় ।
+# 🚀 GitHub Issues Tracker
 
-5. What are template literals?
-Ans:- Template literals হলো JavaScript-এ string লেখার একটি আধুনিক পদ্ধতি।
-এতে সহজে string এর ভিতরে variable ব্যবহার করা যায়। এছাড়া একাধিক লাইনে string লিখতেও এটি সুবিধা দেয়।
+A modern and responsive web application to track and manage project issues efficiently.
+This project simulates a GitHub-style issue tracking system with clean UI and interactive features.
+
+---
+
+## 🌐 Live Demo
+
+👉 https://kaowsar-azad.github.io/5th-assignment/
+
+---
+
+
+
+---
+
+## ✨ Features
+
+* 📋 View all issues (All / Open / Closed)
+* 🔍 Search functionality for issues
+* ➕ Create new issues
+* 🏷️ Issue labels (bug, enhancement, documentation, etc.)
+* ⚡ Priority system (Low, Medium, High)
+* 📅 Issue date tracking
+* 👤 Assigned user display
+* 🪟 Modal popup for issue details
+* 📱 Fully responsive design (Mobile, Tablet, Desktop)
+
+---
+
+## 🛠️ Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript (Vanilla JS)
+
+---
+
+## 📂 Project Structure
+
+```
+📁 project-root
+ ┣ 📄 index.html
+ ┣ 📄 main.html
+ ┣ 📄 style.css
+ ┣ 📄 script.js
+ ┗ 📄 README.md
+```
+
+---
+
+### 3️⃣ Run in browser
+
+👉 Simply open `main.html` in your browser
+
+---
+
+## 📌 Use Cases
+
+* Practice JavaScript DOM manipulation
+* UI/UX design practice
+* Portfolio project
+* Beginner-friendly issue tracker system
+
+---
+
+## 👨‍💻 Author
+
+**Kaowsar Azad**
+
+* 🌐 GitHub: https://github.com/Kaowsar-Azad
+* 💼 LinkedIn: https://www.linkedin.com/in/kaowsar-azad
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+---
